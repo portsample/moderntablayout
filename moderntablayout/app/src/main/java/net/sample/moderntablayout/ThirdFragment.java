@@ -60,7 +60,7 @@ public class ThirdFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        szFavoriteColor = "blue";
+        szFavoriteColor = "French gray";
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -104,7 +104,7 @@ public class ThirdFragment extends Fragment {
                 //sets contents of EditText to szFavoriteColor
                 szFavoriteColor = edFavoriteColor.getText().toString();
                 classicFragmentRefresh(view);
-                tvFavoriteColor.setText(szFavoriteColor);
+               // tvFavoriteColor.setText(szFavoriteColor);
                 alert.dismiss();
             }
         });

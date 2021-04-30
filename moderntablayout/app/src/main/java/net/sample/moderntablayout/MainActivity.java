@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         FragmentManager fragmentManager = getSupportFragmentManager();
 
-        ViewStateAdapter sa = new ViewStateAdapter(fragmentManager, getLifecycle());
-        final ViewPager2 pa = findViewById(R.id.pager);
-        pa.setAdapter(sa);
+        ViewStateAdapter viewStateAdapter = new ViewStateAdapter(fragmentManager, getLifecycle());
+        final ViewPager2 viewPager2 = findViewById(R.id.pager);
+        viewPager2.setAdapter(viewStateAdapter);
+        viewStateAdapter = new ViewStateAdapter(getSupportFragmentManager(), getLifecycle());
 
         // Up to here, we have working scrollable pages
 
@@ -35,20 +36,18 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                pa.setCurrentItem(tab.getPosition());
+                viewPager2.setCurrentItem(tab.getPosition());
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
             }
         });
-        pa.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
                 tabLayout.selectTab(tabLayout.getTabAt(position));

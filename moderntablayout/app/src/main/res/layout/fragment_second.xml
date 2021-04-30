@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/secondfragmentxml"
+    android:tag="second_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".SecondFragment">
 
     <Button
         android:id="@+id/btnfavoritecolorxml"
@@ -58,7 +60,7 @@
         android:layout_height="300dp"
         android:layout_marginTop="325dp"
         android:gravity="top"
-        android:text="Pressing the button on Tab 2 causes the fragment to reload, however the EditText is not updated automatically. User must page to a different tab and then return to Tab 2 for this to occur. Code below shows this fragment transaction (FT), \nft.detach(this).attach(this).addToBackStack(null).commit();"
+        android:text="The favorite color field in this tab is updated when a string is entered in the popup dialog box and the SAVE button in that dialog box is pressed. This action sets a boolean flag to true. There is a timer in SecondFragment.jave that completes 3 times per second. The timer initiates a refresh of the text field when the boolean is true."
         android:textSize="10pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

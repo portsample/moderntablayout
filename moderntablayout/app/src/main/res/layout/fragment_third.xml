@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".ThirdFragment">
 
     <Button
         android:id="@+id/btnfavoritecolorxml"
@@ -58,7 +58,7 @@
         android:layout_height="300dp"
         android:layout_marginTop="325dp"
         android:gravity="top"
-        android:text="Tab 3 is a combination of tab 1 and 2 methodology with a fragment refresh followed by a TextEdit field update. Code below shows this,\nft.detach(this).attach(this).addToBackStack(null).commit();\ntvFavoriteColor.setText(szFavoriteColor);"
+        android:text="Tab 3 FavoriteColor textbox update occurs only after swipe to another tab. This tab uses FragmentTransaction (FT). Unable to identify method of using FT for this at dialog popup dismiss. Code below shows this,\nft.detach(this).attach(this).addToBackStack(null).commit();\ntvFavoriteColor.setText(szFavoriteColor);"
         android:textSize="10pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
